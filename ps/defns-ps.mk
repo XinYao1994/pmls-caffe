@@ -57,7 +57,8 @@ PETUUM_LDFLAGS = -Wl,-rpath,$(PETUUM_THIRD_PARTY_LIB) \
           -lboost_system \
           -lboost_thread \
 	  -lyaml-cpp \
-	  -lleveldb
+	  -lleveldb \
+	  -fPIC
 PETUUM_LDFLAGS += $(HDFS_LDFLAGS)
 
 PETUUM_PS_LIB = $(PETUUM_LIB)/libpetuum-ps.a
