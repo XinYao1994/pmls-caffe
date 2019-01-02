@@ -230,6 +230,8 @@ else ifeq ($(UNAME), Darwin)
 	OSX := 1
 endif
 
+CXX = /usr/bin/g++-6
+
 ifeq ($(LINUX), 1)
 	CXX ?= /usr/bin/g++-6
 	GCCVERSION := $(shell $(CXX) -dumpversion | cut -f1,2 -d.)
