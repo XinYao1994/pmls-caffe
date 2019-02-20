@@ -71,10 +71,12 @@ int main(int argc, char** argv) {
     char pid_str[50];
     for (int pidx = 0; pidx < num_partitions; ++pidx) {
       snprintf(pid_str, 50, "_%d", pidx);
-      const char* new_db_path = (string(db_path) + pid_str).c_str();
+      string new_new_db = string(db_path) + pid_str;
+      std::cout << new_new_db << std::endl;
+      //const char* new_db_path = (string(db_path) + pid_str).c_str();
       leveldb::Status status = leveldb::DB::Open(
-          new_options, new_db_path, &(new_db[pidx]));
-      CHECK(status.ok()) << "Failed to open leveldb " << new_db_path
+          new_options, new_new_db.c_str(), &(new_db[pidx]));
+      CHECK(status.ok()) << "Failed to open leveldb " << new_new_db
           << ". Is it already existing?";
       batch[pidx] = new leveldb::WriteBatch();
     }
