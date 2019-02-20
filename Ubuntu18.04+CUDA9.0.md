@@ -11,6 +11,7 @@ cd ..
 ```
 cd ps
 make
+make (twice) # there are some errors in makefile, but not affect the usage
 cd ..
 ```
 ```
