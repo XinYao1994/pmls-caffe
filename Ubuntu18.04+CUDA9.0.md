@@ -6,6 +6,7 @@ sudo apt-get -y install g++ make python-dev libxml2-dev libxslt-dev git zlibc zl
 git clone https://github.com/petuum/third_party.git
 cd third_party
 make -j2
+make (twice) # there are some errors in makefile, but not affect the usage
 cd ..
 ```
 ```
