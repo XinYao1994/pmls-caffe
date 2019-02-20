@@ -230,10 +230,10 @@ else ifeq ($(UNAME), Darwin)
 	OSX := 1
 endif
 
-CXX = /usr/bin/g++-6
+CXX = /usr/bin/g++
 
 ifeq ($(LINUX), 1)
-	CXX ?= /usr/bin/g++-6
+	CXX ?= /usr/bin/g++
 	GCCVERSION := $(shell $(CXX) -dumpversion | cut -f1,2 -d.)
 	# older versions of gcc are too dumb to build boost with -Wuninitalized
 	ifeq ($(shell echo $(GCCVERSION) \< 4.6 | bc), 1)
@@ -314,7 +314,7 @@ else
 	endif
 endif
 INCLUDE_DIRS += $(BLAS_INCLUDE) /usr/local/include /usr/include/hdf5/serial/
-LIBRARY_DIRS += $(BLAS_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/
+LIBRARY_DIRS += $(BLAS_LIB) /usr/local/lib /usr/lib /usr/lib/x86_64-linux-gnu/hdf5/serial/ 
 
 # Complete build flags.
 COMMON_FLAGS += $(foreach includedir,$(INCLUDE_DIRS),-I$(includedir))
