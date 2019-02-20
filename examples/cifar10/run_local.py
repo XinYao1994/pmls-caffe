@@ -17,7 +17,7 @@ if len(sys.argv) != 3 and len(sys.argv) != 4:
   sys.exit(1)
 
 # Please set the FULL app dir path here
-app_dir = "CAFFE_ROOT"
+app_dir = "/home/ubuntu/pmls-caffe"
 dataset = "cifar10"
 # set the GPU devices you are going to use here
 devices = [0]
