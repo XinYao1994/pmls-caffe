@@ -325,7 +325,7 @@ CXXFLAGS += -pthread -fPIC $(COMMON_FLAGS) $(WARNINGS)
 #Petuum
 CXXFLAGS += $(PETUUM_CXXFLAGS) 
 
-NVCC = /usr/bin/nvcc
+NVCC = nvcc
 NVCCFLAGS += -ccbin=$(CXX) -Xcompiler -fPIC $(COMMON_FLAGS) -std=c++11
 # mex may invoke an older gcc that is too liberal with -Wuninitalized
 MATLAB_CXXFLAGS := $(CXXFLAGS) -Wno-uninitialized
