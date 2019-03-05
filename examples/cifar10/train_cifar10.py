@@ -7,7 +7,6 @@ import time
 hostfile_name = "machinefiles/localserver"
 
 app_dir = dirname(dirname(dirname(os.path.realpath(__file__))))
-proj_dir = dirname(dirname(app_dir))
 
 hostfile = join(app_dir, hostfile_name)
 

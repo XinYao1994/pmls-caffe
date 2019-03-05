@@ -17,14 +17,14 @@ if len(sys.argv) != 3 and len(sys.argv) != 4:
   sys.exit(1)
 
 # Please set the FULL app dir path here
-app_dir = "/home/ubuntu/pmls-caffe"
+app_dir = dirname(dirname(dirname(os.path.realpath(__file__))))
 dataset = "cifar10"
 # set the GPU devices you are going to use here
 devices = [0]
 
 client_id = sys.argv[1]
 hostfile = sys.argv[2]
-proj_dir = dirname(dirname(app_dir))
+
 if len(sys.argv) == 4 and sys.argv[3] == "false":
   use_yarn = False
 else:
