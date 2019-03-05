@@ -1,5 +1,7 @@
 # PMLS-Caffe: Distributed Deep Learning Framework on Petuum
 
+Both the programs and scripts are real worsen than I thought, I have to re-write all scripts!
+
 PMLS-Caffe (formerly Poseidon) is a scalable open-source framework for large-scale distributed deep learning on CPU/GPU clusters. It is initially released in January 2015 along with PMLS v1.0 as an application under the Bösen parameter server.
 
 PMLS-Caffe builds upon the Caffe (http://caffe.berkeleyvision.org/) CNN libraries and the PMLS distributed ML framework (http://sailing-lab.wixsite.com/sailing-pmls) as a starting point, but goes further by implementing three key contributions for efficient CNN training on clusters of GPU-equipped machines: (i) a three-level hybrid architecture that allows PMLS-Caffe to support both CPU-only clusters as well as GPU-equipped clusters, (ii) a distributed wait-free backpropagation (DWBP) algorithm to improve GPU utilization and to balance communication, and (iii) a dedicated structure-aware communication protocol (SACP) to minimize communication overheads.
