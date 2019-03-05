@@ -24,6 +24,8 @@ using std::string;
 //Xin YAO
 #include <algorithm>    // std::shuffle
 #include <array>        // std::array
+#include <random> // std::default_random_engine
+
 DEFINE_string(backend, "leveldb", "The backend for storing the result");
 
 const int kCIFARSize = 32;
