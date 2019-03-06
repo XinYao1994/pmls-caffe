@@ -60,6 +60,8 @@ done
 echo "All done!"
 
 # Spawn program instances
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64; \
+# ./examples/cifar10/train_cifar10.sh
 client_id=0
 for ip in $unique_host_list; do
   echo Running client $client_id on $ip
@@ -68,7 +70,6 @@ for ip in $unique_host_list; do
   cmd="'mkdir -p ${output_dir}; \
       mkdir -p ${log_path}; \
       ulimit -c unlimited; \
-      export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64; \
       GLOG_logtostderr=false \
       GLOG_stderrthreshold=0 \
       GLOG_log_dir=$log_path \

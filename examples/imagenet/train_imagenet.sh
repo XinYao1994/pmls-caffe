@@ -59,6 +59,7 @@ done
 echo "All done!"
 
 # Spawn program instances
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64; \
 client_id=0
 for ip in $unique_host_list; do
   echo Running client $client_id on $ip
@@ -66,7 +67,6 @@ for ip in $unique_host_list; do
 
   cmd="'mkdir -p ${output_dir}; \
       mkdir -p ${log_path}; \
-      export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64; \
       ulimit -c unlimited; \
       GLOG_logtostderr=false \
       GLOG_stderrthreshold=0 \

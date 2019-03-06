@@ -57,7 +57,7 @@ prog_name = "caffe_main"
 prog_path = app_dir + "/build/tools/" + prog_name + " train "
 
 env_params = (
-  "export LD_LIBRARY_PATH=/usr/local/cuda/lib64; "
+  #"export LD_LIBRARY_PATH=/usr/local/cuda/lib64; "
   "GLOG_logtostderr=false "
   "GLOG_stderrthreshold=0 "
   "GLOG_v=-1 "
