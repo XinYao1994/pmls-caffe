@@ -12,7 +12,7 @@ from os.path import join
 import time
 import sys
 
-if len(sys.argv) != 3 and len(sys.argv) != 4:
+if len(sys.argv) != 4 and len(sys.argv) != 5:
   print "usage: %s <client-id> <hostfile> [use-yarn=true]" % sys.argv[0]
   sys.exit(1)
 
@@ -30,13 +30,13 @@ if len(sys.argv) == 4 and sys.argv[3] == "false":
 else:
   use_yarn = True
 
-output_dir = app_dir + "/output/" + dataset
+output_dir = app_dir + "/output"+sys.argv[4]+"/" + dataset
 log_dir = output_dir + "/logs." + client_id
 net_outputs_prefix = output_dir + "/" + dataset
 
 params = {
-    "solver": app_dir + "/examples/cifar10/cifar10_quick_solver.prototxt"
-    , "table_staleness": 0
+    "solver": app_dir + "/examples/cifar10/prototext/cifar10_quick_solver"+sys.argv[4]+".prototxt"
+    , "table_staleness": 3
     , "svb": "false"
     , "net_outputs": net_outputs_prefix
     , "snapshot": ""
