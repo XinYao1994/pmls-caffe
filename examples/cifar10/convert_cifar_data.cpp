@@ -100,6 +100,9 @@ void convert_dataset(const string& input_folder, const string& output_folder) {
 				fileid + 1);
 		std::ifstream data_file((input_folder + str_buffer).c_str(),
 				std::ios::in | std::ios::binary);
+		for (int i = 0; i < kCIFARBatchSize; i++) {
+			arr[i] = i;
+	    	}
 		CHECK(data_file) << "Unable to open train file #" << fileid + 1;
 		// Xin YAO
 		std::shuffle(arr.begin(), arr.end(),
