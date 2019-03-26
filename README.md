@@ -10,4 +10,3 @@ PMLS-Caffe inherits many functionalities and benefits of PMLS, including the Suf
 
 Please consult the [documentation page](http://docs.petuum.com/projects/petuum-poseidon) for more details on how to setup PMLS-Caffe on your clusters and start training your model. We also disclose the system architecture of PMLS-Caffe and several distributing strategies for fast parallelization of deep learning in the following arXiv paper: 
 
-## Both the programs and scripts are real worse than I thought, I have to re-write all scripts!
